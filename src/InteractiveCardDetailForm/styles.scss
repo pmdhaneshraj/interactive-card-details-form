@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+.dot {
+  position: absolute;
+  height: 3rem;
+  width: 3rem;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 10%;
+  left: 10%;
+}
+
+.small-dot  {
+  @extend .dot;
+  left: 25%;
+  top: 16%;
+  height: 1.2rem;
+  width: 1.2rem;
+  border-style: solid;
+  background-color: unset;
+
+}
+
+.card-container {
+  height: 100vh;
+  .page-left {
+    font-family: 'Space Grotesk', sans-serif;
+    .bg-img{
+      position: fixed;
+      left: 0;
+      height: 100%;
+    }
+    .card-front {
+      border-radius: 2rem;
+      color: #fff;
+      position: absolute;
+      top: 20%;
+      left: 40%;
+      height: 245px;
+      box-shadow: 10px 12px 14px 0 rgba(0,0,0,0.25);
+      .card-number {
+        position: absolute;
+        bottom: 30%;
+        left: 10%;
+        width: 80%;
+        letter-spacing: .2rem;
+        text-align: left;
+      }
+      .card-holder-and-date {
+        position: absolute;
+        bottom: 10%;
+        display: flex;
+        justify-content: space-between;
+        left: 10%;
+        width: 80%;
+        .holder-name {
+          left: 10%;
+        }
+        .card-date {
+          right: 10%
+        }
+      }
+    }
+    .card-back {
+      border-radius: 2rem;
+      color: #fff;
+      position: absolute;
+      top: 51%;
+      left: 55%;
+      height: 245px;
+      box-shadow: 10px 12px 14px 0 rgba(0,0,0,0.25);
+      border-radius: 1rem;
+      .card-holder-and-date {
+        display: flex;
+        justify-content: space-between;
+      }
+      .card-cvv{
+        color:#fff;
+        position: absolute;
+        right: 12%;
+        bottom: 40%;
+      }
+    }
+  }
+  .page-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .payment-form{
+      .ant-form-item-row {
+        display: flex;
+        flex-direction: column;
+        .ant-form-item-label {
+          text-align: left;
+          ::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
